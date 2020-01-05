@@ -1,0 +1,548 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>六五绘画系统</title>
+	<meta charset="utf-8">
+	<!-- <link rel="stylesheet" type="text/css" href="style.css">
+ -->
+	
+	<style type="text/css">
+		*{margin: 0;padding: 0;list-style: none;}
+
+		body{
+			background-color: #f3f3f3;
+			min-width: 800px;
+		}
+		.container-body{
+			background-color: #3f3f3f;
+			margin: auto;
+		}
+		
+		a{text-decoration:none;}
+		a:hover{text-decoration:none;}
+		div{font-size: 18px;}
+		.top{
+			background-color: #000;
+			width: 100%;
+			height: 50px;
+		}
+		.content{
+			width: 100%;
+			position: relative;
+		}
+		.top-img{
+			position: absolute;
+			width: 100%;
+			height: 300px;
+			top: 0;
+		}
+		.logo{
+			height: 300px;
+		}
+		.logo h2{margin-bottom: 10px;}
+		.content-top {
+			position: absolute;
+		    top: 100px;
+		    left: 8%;
+		}
+		
+		.button-top .button {
+		    display: inline-block;
+		    margin-right: 20px;
+		    padding: 5px 20px;
+		    margin-top: 30px;
+		    border: 1px solid #2d7dbc;
+		    border-radius: 7px;
+		    color: #2d7dbc;
+		    background-color: rgba(199, 199, 199, 0.69);
+		    cursor: pointer;
+		}
+		.button-top .button a{
+			color: #2d7dbc;
+			
+		}
+		.button-top .button.active {
+			background-color: #2d7dbc;
+			
+		} 
+		.button-top .button.active a{color: #fff;}
+
+		.info{
+			padding: 50px 0px;
+			color: #dcdcdc;
+		}
+		.info h3{
+			text-align: center;
+			margin-bottom: 20px;
+		}
+		.info-text{
+			max-width: 800px;
+	    	margin: auto;
+		}
+
+		.util-list{
+			background-color: #262626;
+			color: #fff;
+			padding-bottom: 140px;
+		    width: 84%;
+    		padding: 0 8%;
+		    padding-bottom: 30px;
+		}
+		.util-list.meeting{
+			 padding-bottom: 0px;
+		}
+		.util-top{
+			height: 100px;
+			line-height: 100px;
+		}
+		.util-top img {
+		    width: 40px;
+		    vertical-align: middle;
+		    margin-right: 8px;
+		}
+		
+		.util img{
+			width: 90px;
+			margin:10px; 
+			vertical-align: middle;
+		}
+		.util-info{
+			min-width: 200px;
+			display: inline-block;
+			vertical-align: middle;
+			line-height: 46px;
+			color: #fff;
+		}
+		.util-info h2 {
+		    font-weight: 100;
+		}
+		.util-buttom {
+		    width: 30px;
+		    display: inline-block;
+		    background-color: #2d7dbc;
+		    height: 100%;
+		    vertical-align: middle;
+		    float: right;
+		    border-radius: 8px;
+		}
+
+		.content-bottom{
+			margin-top:40px;
+			height: 150px;
+			text-align: center;
+			line-height: 150px;
+			background-color: #262626;
+			color: #dcdcdc;
+		}
+		
+		
+		.btn-a:hover{
+		    border: 1px solid #e6e6e6;
+			box-shadow: 1px 1px 2px #888888;
+		}
+		.container{padding: 0;}
+
+		.util {
+		    background-color: #00416d;
+		    border-radius: 8px;
+		    margin-bottom: 10px;
+		    cursor: pointer;   
+		    height: 100px; 
+		    border:1px solid  #00416d;
+		}
+	
+		.foot{
+		    background:#262626;
+		    padding-bottom:0;
+		    overflow:hidden;
+	        width: 84%;
+   			padding: 0 8%;
+		}
+		.foot a{
+		    color:#dcdcdc;
+	        font-size: 14px;
+		}
+		.foot a:hover{
+		    text-decoration:underline
+		}
+		.foot h5{
+		    color:#f5f5f5;
+		    padding-bottom:5px;
+		}
+		.foot p{
+		    color:#f5f5f5;
+		    font-size:14px;
+		}
+		.foot-all{
+		    position: relative;
+		    width:100%;
+		    overflow:hidden;
+	        margin-bottom: 20px;
+		}
+		.foot-a {
+		    padding-top: 2%;
+		    display: inline-block;
+		    vertical-align: top;
+		    width: 130px;
+		}
+		
+		.foot-a h5{
+		    padding: 8px 0;
+		}
+		.foot-b{
+		    border-bottom:1px solid #d6d6d6;
+		    text-align: center;
+		}
+		.foot-a ul{
+		   
+		}
+		.foot-b p{
+		    margin-bottom:0px!important;
+		}
+		.foot-c {
+		  
+		    margin-right:30px;
+		    text-align: center; 
+		    margin-top:2px;
+		}
+		.foot-c p{
+		    margin-bottom:0px;
+		}
+		.foot-d {
+		    margin-top:2px;
+		    text-align: center;
+		}
+		.foot-d a{
+		    border-right:1px solid #d6d6d6;
+		    margin-right:12px;
+		    padding-right:12px;
+		}
+		.foot-e{
+		    text-align: center;
+		}
+		.privacidad {
+		    padding-top:90px;
+		    margin-left:25%;
+		    width:50%;
+	    }
+	    .privacidad h1 {
+	    text-align:center;
+	    font-size:50px;
+	    color:black;
+	    font-weight:900;
+	    }
+	    .privacidad p {
+	    font-size:30px;
+	    letter-spacing:2px;
+	    line-height:40px;
+	    color:black;
+    	}
+
+    	.content.util-list.meeting {
+		    background-color: #3f3f3f;
+		}
+
+		.meeting div.util {
+		    background-color: #e6e6e6;
+		    color: #000;
+	        margin-top: 30px;
+	        margin-bottom: 30px;
+		}
+		.meeting div.util-buttom {
+			background-color: #dcdcdc;
+		}
+
+		@media   (min-width: 901px) { 
+			.util {
+			   width: 48%;
+			   display: inline-block;
+			}
+			.util:nth-child(2n+2) {
+			    margin-right: 1%;
+			}
+			.foot-a {
+			    margin-right: calc(100% / 5 - 130px);
+			}
+			.foot-a:last-child{
+				 margin-right: 0;
+			}
+			.meeting .util {
+			   /*margin-left: 25%;*/
+			   margin: auto;
+			}
+		} 
+		/*如果文档宽度小于 900 像素*/
+		@media screen and (max-width: 901px) { 
+			.util {
+			    width: 84%;
+			    margin: auto;
+			    margin-bottom: 10px;
+			}
+			
+		} 
+	</style>
+
+	<style type="text/css">
+		.img-logo{
+			width: 200px;
+			height: 50px;
+			float: left;
+		}
+		.nav-a {
+		    display: inline-block;
+		    padding: 0 10px;
+		    line-height: 50px;
+		    font-size: 15px;
+		}
+		.nav-a a{color: #fff;}
+
+		.nav-list {
+		    float: right;
+		}
+	</style>
+
+</head>
+<body>
+
+
+<div class="container-body">
+	<div class="top">
+		<img src="img/logo.jpg" alt="" class="img-logo">
+		<div class="nav-list">
+			<div class="nav-a"><a href="http://6565kj.com/#from=ARTpage">主页</a></div>
+			<div class="nav-a"><a href="#">简介</a></div>
+			<div class="nav-a"><a href="#">使用方法</a></div>
+			<div class="nav-a"><a href="#">订购系统</a></div>
+			<div class="nav-a"><a href="#">价值观</a></div>
+			<div class="nav-a"><a href="#">下载</a></div>
+			<div class="nav-a"><a href="#">申请API</a></div>
+		</div>
+	</div>
+	
+	<div class="content logo">
+		<img class="top-img" src="img/1.jpg">
+		<div class="content-top">
+			<h2>六五绘画系统</h2>
+			<div>创造一种新的方式去绘制</div>
+			<div class="button-top"> 
+				
+					<div class="btn-a button active">
+						<a href="https://www.dingtalk.com/">
+							联系
+						</a>
+					</div>
+				<div class="btn-a button">
+					<a href="https://exmail.qq.com/">
+						成员登录
+					</a>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<div class="content info">
+		<h3>六五绘画团队发展定位</h3>
+		<div class="info-text">科技发展的目的是让人们生活变得更加美好,而艺术将会是提升一座城市乃至国家文化的最好方式。即将到来的新一代互联网将会是社会发展与网络强国战略的重要基石,公司将不断发扬创新的力量,创造出更多服务生活的高科技产品。</div>
+	</div>
+
+	<div class="content util-list">
+		<div class="util-top">
+			<img src="img/_0013_-7.png">
+			<span>六五绘画团队成员工具中心</span>
+		</div>
+
+		<div class="util btn-a">
+			<a href="http://6565kj.com/WBJ/ART/linggan.html">
+				<img src="img/idea.png">
+				<div class="util-info">
+					<h2>灵感</h2>
+					<div>文章页面</div>
+				</div>
+				<div class="util-buttom"></div>
+			</a>
+		</div>
+
+		<div class="util btn-a">
+			<a href="http://6565kj.com/WBJ/ART/POWER.html">
+				<img src="img/power.png">
+				<div class="util-info">
+					<h2>计算</h2>
+					<div>文章页面</div>
+				</div>
+				<div class="util-buttom"></div>
+			</a>
+		</div>
+
+		<div class="util btn-a">
+			<a href="http://6565kj.com/WBJ/ART/team.html">
+				<img src="img/team.png">
+				<div class="util-info">
+					<h2>团队</h2>
+					<div>文章页面</div>
+				</div>
+				<div class="util-buttom"></div>
+			</a>
+		</div>
+		
+		<div class="util btn-a">
+			<a href="http://6565kj.com/WBJ/ART/gallery.html">
+				<img src="img/photo.png">
+				<div class="util-info">
+					<h2>画册</h2>
+					<div>画册-2017</div>
+				</div>
+				<div class="util-buttom"></div>
+			</a>
+		</div>
+
+				<div class="util btn-a">
+			<a href="http://6565kj.com/WBJ/art/software.html#from=artpage">
+				<img src="img/systeam.png">
+				<div class="util-info">
+					<h2>软体</h2>
+					<div>文章页面</div>
+				</div>
+				<div class="util-buttom"></div>
+			</a>
+		</div>
+		
+				<div class="util btn-a">
+			<a href="http://6565kj.com/WBJ/art/link.html#from=somepage">
+				<img src="img/cl.png">
+				<div class="util-info">
+					<h2>技术层面</h2>
+					<div>引用信息</div>
+				</div>
+				<div class="util-buttom"></div>
+			</a>
+		</div>
+		
+		
+		
+		
+		
+	</div>
+
+	<div class="content util-list meeting">
+		<div class="util btn-a ">
+			<a href="https://tms.dingtalk.com/markets/dingtalk/shipinghuiyi">
+				<img src="img/18.png">
+				<div class="util-info">
+					<h2>会议预约</h2>
+					<div>申请召开内部视频会议</div>
+				</div>
+				<div class="util-buttom"></div>
+			</a>
+		</div>
+<div class="util btn-a ">
+			<a href="/office/app">
+				<img src="img/app.png">
+				<div class="util-info">
+					<h2>软件下载</h2>
+					<div>在工作网络中必备的程序</div>
+				</div>
+				<div class="util-buttom"></div>
+			</a>
+		</div>
+
+
+	</div>
+	
+ <footer class="foot"> 
+   <nav class="foot-all"> 
+    <div class="foot-a">
+     <h5 id="phonea"><strong>较新的项目</strong></h5>
+     <ul id="phonemenua">
+      <li><a href="/WBJ/ART/">六五艺术</a></li>
+      <li><a href="/YXY/AI/">雪樱智慧</a></li>
+      <li><a href="/WBJ/TOUCHBAR">TOUCHBAR</a></li>
+      <li><a href="/SO/">六五浏览器</a></li>
+      <li><a href="/WBJ/phone">六五PHONE</a></li>
+      <li><a href="/SO/SKY">六五天空</a></li>
+      <li><a href="/SO/PCB">六五PCB支持</a></li>
+      <li><a href="/TECH/made">软件定制项目</a></li>
+      <li><a href="/tech/sever">云端服务器</a></li>
+     </ul>
+    </div> 
+    <div class="foot-a">
+     <h5 id="phoneb"><strong>六五圈</strong></h5>
+     <ul id="phonemenub">
+      <li><a href="/VIP/">六五会员</a></li>
+      <li><a href="/TECH">六五开发者</a></li>
+      <li><a href="/TECH/translation">六五翻译人员</a></li>
+      <li><a href="/SPORTS/vip">六五运动</a></li>
+      <li><a href="/WBJ/ART/art.html">六五艺术中心</a></li>
+      <li><a href="/TECH/bug">六五程序纠错</a></li>
+      <li><a href="/TECH/DATA/JZG/HJ">六五化学与环境</a></li>
+      <li><a href="/VIP/thing">六五的活动</a></li>
+      <li><a href="/VIP/join">加入六五</a></li>
+     </ul>
+    </div> 
+    <div class="foot-a">
+     <h5 id="phonec"><strong>六五与教育</strong></h5>
+     <ul id="phonemenuc">
+      <li><a href="/TECH/school">六五学校支持</a></li>
+      <li><a href="/TECH/school/offer">六五学生优惠</a></li>
+     </ul>
+      
+      <h5 id="phonef"><strong>六五的价值观</strong></h5>
+     <ul id="phonemenuf">
+      <li><a href="/SO/jzg/use.html">辅助功能</a></li>
+      <li><a href="/SO/jzg/green.html">环境责任</a></li>
+      <li><a href="/SO/jzg/privacy.html">隐私</a></li>
+      <li><a href="/SO/jzg/partner.html">供应商责任</a></li>
+     </ul>
+
+    </div> 
+    <div class="foot-a">
+     <h5 id="phoned"><strong>六五与商业</strong></h5>
+     <ul id="phonemenud">
+      <li><a href="/TECH/inf">六五与商务</a></li>
+      <li><a href="/TECH/inf/buy">商务选购</a></li>
+     </ul>
+     <h5 id="phoneg"><strong>视频</strong></h5>
+     <ul id="phonemenug">
+      <li><a href="#">英文类</a></li>
+      <li><a href="#">创作</a></li>
+      <li><a href="#">开发者</a></li>
+      <li><a href="#">普通用户</a></li>
+     </ul>
+    </div> 
+    <div class="foot-a">
+     <h5 id="phonee"><strong>附属领域</strong></h5>
+     <ul id="phonemenue">
+      <li><a href="/SPORTS">运动</a></li>
+      <li><a href="/TECH/sever/vop">云服务器</a></li>
+      <li><a href="/TECH/special">特别定制</a></li>
+     </ul>
+      <h5 id="phoneh"><strong>关于六五</strong></h5>
+     <ul id="phonemenuh">
+      <li><a href="/TECH/inf/join">工作机会</a></li>
+      <li><a href="/TECH/inf/manager">六五管理层</a></li>
+      <li><a href="/TECH/inf/about">六五简介</a></li>
+      <li><a href="/TECH/inf/future">六五发展</a></li>
+     </ul>
+    </div> 
+    
+  
+   </nav>
+   <div class="foot-b">
+   		 <p>提醒 <a href="#">我们</a>会使用你的Cookies继续浏览视为您同意 <a href="/tech">隐私承诺</a></p>
+   </div>
+   <div class="foot-c">
+   		 <p>Copyright &copy; 2017 六五六五电子科技有限公司. 保留所有权利。</p>
+   </div>
+   <div class="foot-d">
+	    <a href="#">隐私政策</a>
+	    <a href="http://www.6565kj.com/a/guanyuwomen/inf/2018/1107/37.html">使用条款</a>
+	    <a href="#" style="border:none">网站地图</a>
+   </div>
+   <div class="foot-e">
+    	<p>65TECHNOLOGY CENTER</p> 
+   </div> 
+  </footer>
+</div>
+
+</body>
+</html>

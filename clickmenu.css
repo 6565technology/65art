@@ -1,0 +1,35 @@
+﻿.clickmenu {
+width: 100px;
+border: 1px solid #ccc;
+position: absolute;
+box-shadow: 0 0 5px rgba(0,0,0,.2);
+padding:0;
+transition: all .1s ease;
+z-index:9999;
+background-color:#000000;   
+}
+.clickmenu li {
+list-style: none;
+width: 100%;
+}
+.clickmenu li a {
+display: inline-block;
+text-decoration: none;
+color: #ffffff;
+width: 100%;
+padding: 10px 0;
+text-align: center;
+}
+.clickmenu li:first-of-type{
+border-radius: 5px 5px 0 0;
+}
+.clickmenu li a:hover,
+.clickmenu li a:active {
+background: #eee;
+color: #0AAF88;
+}
+.clickmenu i {
+font-size:20px;
+padding-right:5%;
+}
+        

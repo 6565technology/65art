@@ -1,0 +1,260 @@
+body{
+    background:#c0c0c0;
+}
+div{
+    border-radius:10px;
+}
+p{
+    color:white;
+    margin:0;
+    font-size:30px;
+    -o-text-overflow: ellipsis;/*兼容opera*/
+    text-overflow: ellipsis;/*这就是省略号喽*/
+    overflow: hidden;/*设置超过的隐藏*/
+    white-space: nowrap;/*设置不折行*/
+}
+img{
+    float:left;
+}
+.floatleft{
+    float:left;
+    padding-top: 19px;
+    padding-right: 10px;
+}
+.floatright{
+    float:right;
+}
+.top{
+    width:98%;
+    margin-left:1%;
+    height:80px;
+    background: #696969;
+    margin-top:5px;
+}
+.topleft1{
+    width:10%;
+    background:#0AAF88;
+    height:80px;
+    border-radius:10px 0 0 10px;
+    position:absolute;;
+}
+.topleft2{
+    border-style: solid;
+    border-width: 0 0 0 1px;
+    height:80px;
+    width:30%;
+    margin-left:20%;
+    position:absolute;
+    border-radius:0 10px 10px 0;
+    border-color:#0aaf88;
+}
+.topleft2p{
+    height:60px;
+    margin-top:10px;
+    display: table;
+    width:98%;
+    background:#000000;
+    border-radius: 0;
+    margin-left:5px;
+}
+.topleft2p p{
+    padding-left:10px;
+    font-size:30px;
+    display: table-cell;
+    vertical-align: middle;
+    color:#0aaf88;
+}
+.topleft3{
+    position:absolute;
+    width:30%;
+    margin-left: 50%;
+    display:table;
+    height:80px;
+}
+.topleft3div{
+    display: table-cell;
+    vertical-align: middle;
+}
+.topleft3input{
+    float:right;
+    height:40px;
+    width:70%;
+    border-radius:10px 0 0 10px;
+    background:#808080;
+    border:0;
+}
+.topleft3div img{
+    float:right;
+    width:40px;
+    background:#808080;
+}
+.topleft4{
+    width:20%;
+    float:right;
+}
+.topleft4 img{
+    margin-right:10px;
+    width:70px;
+    margin-top:5px;
+    float:right;
+}
+.bodydiv{
+    margin-left:3%;
+    margin-top:20px;
+}
+.bodydiv1 {
+    width: 30%;
+    border-radius: 5px;
+    float:left;
+    margin-right:3%;
+}
+.bodydiv1top1 {
+    height:100px;
+    background:#696969;
+    margin-bottom:20px;
+}
+.bodydiv1top1 img{
+    width:75px;
+    padding: 10px;
+    background: #808080;
+    border-radius: 10px;
+    margin-top: 12.5px;
+    margin-left: 10%;
+}
+.bodydiv1top2 {
+    height:50px;
+    background:#696969;
+    margin-bottom:20px;
+}
+.bodydiv1top2 p{
+    font-size:30px;
+    padding-top:5px;
+    padding-left:10px;
+}
+.bodydiv1top3 {
+    background:#696969;
+    height:300px;
+    margin-bottom:20px;
+}
+.bodydiv1top3div {
+    height:75px;
+    border-style:solid;
+    border-width:0 0 3px 0;
+    border-radius:10px 10px 0 0;
+}
+.bodydiv1top4 {
+    background:#696969;
+    height:225px;
+    margin-bottom:20px;
+}
+.bodydiv2top1 {
+    height:70px;
+    background:#696969;
+    margin-bottom:20px;
+}
+.green{
+    color:green;
+    padding-top:15px;
+    font-size:35px;
+}
+.white{
+    padding-top:19px;
+    padding-right:15px;
+}
+.pr{
+    padding-right:15px;
+}
+.copy p{
+    float:left;
+}
+.img{
+    width:50px;
+    margin:13px 10px 0 17px;
+}
+.noborder div{
+    border-style: none;
+}
+.ingreen{
+    position: absolute;
+    width: 25%;
+    margin-left: 2%;
+    height: 58px;
+    margin-top: 10px;
+    background-color: black;
+}
+.ingreen img{
+    width:40px;
+}
+.ingreen p{
+    margin-top:0px;
+    padding-top:9px;
+}
+.bodydiv2top3{
+    background: #696969;
+    height: 195px;
+    margin-bottom: 20px;
+}
+.bodydiv2top3div{
+    height:65px;
+    border-style: solid;
+    border-width: 0 0 3px 0;
+    border-radius: 10px 10px 0 0;
+}
+.bodydiv2top3 p{
+    padding-top:18px!important;
+}
+.bodydiv2top3 img{
+    margin-top:9px!important;
+}
+.pingfen{
+    height:260px;
+    width: 100%;
+    margin-top:50px;
+}
+.pingfen1{
+    height:100%;
+    background:grey;
+    width: 300px;
+    margin: 0 auto;
+}
+.pingfen11{
+    height:52px;
+    width:100%;
+}
+.pingfen12{
+    height: 160px;
+    margin-top:-40px;
+    margin-bottom:20px;
+    width: 180px;
+    margin: 0 auto;
+    margin-top: -50px;
+    font-size: 150px;
+    color: green;
+    margin-top: -65px;
+    margin-bottom: 45px;
+}
+.pingfen12 strong {
+    font-size: 70px!important;
+    margin-left: -12px!important;
+    margin-top: -12px!important;
+    padding-top: 0 !important;
+    color:green;
+}
+.pingfen13{
+    width: 128px;
+    margin: 0 auto;
+    margin-top: 28px;
+}
+.pingfen13 p{
+    font-size: 32px;
+    color: black;
+}
+.paddingtop {
+    padding-top: 0 !important;
+}
+.paddingtop5 {
+    padding-top: 5px !important;
+}
+.paddingtop10 {
+    padding-top: 10px !important;
+}
